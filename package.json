@@ -9,10 +9,9 @@
   "publishConfig": {
     "access": "public"
   },
-  "files": [
-    "dist",
-    "index.js"
-  ],
+  "bin": {
+    "svg-to-react": "./index.js"
+  },
   "scripts": {
     "clean": "rimraf coverage dist",
     "build": "tsc -b tsconfig.release.json",
@@ -21,7 +20,8 @@
     "test": "jest --coverage",
     "test:watch": "jest --watch",
     "convert": "./index.js convert",
-    "prepublishOnly": "yarn build"
+    "prepublishOnly": "yarn build",
+    "svg-to-react": "node ./index.js"
   },
   "dependencies": {
     "@svgr/babel-plugin-add-jsx-attribute": "^4.2.0",
